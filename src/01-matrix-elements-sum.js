@@ -19,10 +19,10 @@ function getMatrixElementsSum(matrix) {
   const matrixLengthX = matrix[0].length;
   let sum = 0;
 
-  // get sum of the first line elements, cause there are no zeroes above them for sure
+  // get the sum of the first line elements, cause there are no zeroes above them for sure
   sum = matrix[0].reduce((a, b) => a + b, 0);
 
-  // starting from second line
+  // add no_zero_above elements to the sum, starting from the second line
   for (let i = 0; i < matrixLengthX; i++) {
     for (let j = 1; j < matrixLengthY; j++) {
       if (matrix[j - 1][i] !== 0) {
