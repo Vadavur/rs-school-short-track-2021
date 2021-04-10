@@ -13,14 +13,8 @@
  *
  */
 function isMAC48Address(n) {
-  const mac = n.split('-');
-
-  if (mac.length !== 6) return false;
-  for (let i = 0; i < mac.length; i++) {
-    const regexp = /^[0-9a-f][0-9a-f]$/i;
-    if (!regexp.test(mac[i])) return false;
-  }
-  return true;
+  const regexp = /^([0-9a-f]{2}-){5}[0-9a-f]{2}$/i;
+  return regexp.test(n);
 }
 
 module.exports = isMAC48Address;
