@@ -18,8 +18,7 @@
  */
 
 function removeKFromList(l, k) {
-  const returnList = l;
-  let currentItem = returnList;
+  let currentItem = l;
   while (currentItem !== null) {
     const nextItem = currentItem.next;
     if (currentItem.value === k) {
@@ -30,7 +29,7 @@ function removeKFromList(l, k) {
     }
   }
 
-  return returnList;
+  return l;
 }
 
 module.exports = removeKFromList;
