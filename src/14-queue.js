@@ -35,6 +35,9 @@ class Queue {
   }
 
   dequeue() {
+    if (this.head === null) {
+      return undefined;
+    }
     const dequeuedItem = this.head.value;
     if (this.tail === this.head) {
       this.tail = null;
